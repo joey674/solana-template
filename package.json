@@ -1,0 +1,29 @@
+{
+  "name": "solana-case3-counter",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "clean": "npm run clean:client && npm run clean:program",
+    "clean:client": "rm -rf node_modules && rm -rf package-lock.json",
+    "clean:program": "chmod +x ./scripts/program.sh && ./scripts/program.sh clean",
+    "start:client": "node client/main.js",
+    "build:program": "chmod +x ./scripts/program.sh && ./scripts/program.sh build",
+    "deploy:program": "chmod +x ./scripts/program.sh && ./scripts/program.sh deploy"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.5",
+    "bn.js": "^5.2.0",
+    "mz": "^2.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "prettier": "^3.1.0",
+    "prettier-eslint": "^16.1.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
